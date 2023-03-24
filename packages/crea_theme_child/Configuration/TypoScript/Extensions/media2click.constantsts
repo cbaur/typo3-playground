@@ -1,0 +1,8 @@
+@import 'EXT:media2click/Configuration/TypoScript/constants.typoscript'
+
+plugin.media2click {
+  enable = 1
+  enablePermanently = 1
+  privacyPid = 12
+  storagePid = 19
+}
