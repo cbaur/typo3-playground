@@ -1,0 +1,4 @@
+SYS:
+  reverseProxyHeaderMultiValue: last
+  reverseProxyIP: '*'
+  reverseProxySSL: '*'

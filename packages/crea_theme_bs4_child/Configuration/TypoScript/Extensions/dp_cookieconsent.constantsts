@@ -1,0 +1,40 @@
+@import 'EXT:dp_cookieconsent/Configuration/TypoScript/constants.txt'
+plugin.tx_cookieconsent {
+    settings {
+        # cat=plugin.cookieconsent; type=int+; label= PID of Cookie Storage
+        storagePid = 4
+        # cat=plugin.cookieconsent; type=int+; label= PID to Data Protection
+        url = 12
+        # cat=plugin.cookieconsent; type=string; label= target for link tag
+        target = _blank
+        # cat=plugin.cookieconsent; type=options[edgeless,classic,basic,wire]; label=Layout
+        theme = edgeless
+        # cat=plugin.cookieconsent; type=options[top,top-left,top-right,bottom,bottom-left,bottom-right]; label= Position
+        position = bottom-right
+        # cat=plugin.cookieconsent; type=options[info,opt-out,opt-in]; label = Type
+        type = info
+        # cat=plugin.cookieconsent; type=options[true,false]; label = adds a button to review the consent window
+        revokable = true
+        # cat=plugin.cookieconsent; type=options[true,false]; label = pre check statistics in checkboxes layout
+        statistics = true
+        # cat=plugin.cookieconsent; type=options[true,false]; label = pre check marketing in checkboxes layout
+        marketing = true
+        # cat=plugin.cookieconsent; type=options[true,false]; label = force page reload after revoke
+        reloadOnRevoke = false
+
+        palette {
+            popup {
+                # cat=plugin.cookieconsent/popup; type=color; label= Bar: Background
+                background = rgba(0,0,0,.8)
+                # cat=plugin.cookieconsent/popup; type=color; label= Bar: Text
+                text = #fff
+            }
+            button {
+                # cat=plugin.cookieconsent/button; type=color; label= Button: Background
+                background = #b81839
+                # cat=plugin.cookieconsent/button; type=color; label= Button: Text
+                text = #fff
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:form_mailtext/Configuration/Form/MailtextFormSetup.yaml
+            200 = EXT:crea_theme_bs4/Configuration/Yaml/form.yaml
+        }
+    }
+}
