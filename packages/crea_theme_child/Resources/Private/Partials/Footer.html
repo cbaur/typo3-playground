@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<!-- Footer -->
+<footer class="footer">
+	<f:if condition="{footerPagePid}">
+        <f:cObject typoscriptObjectPath="lib.dynamicContent"
+                   data="{pageUid: '{footerPagePid}', colPos: '0'}" />
+	</f:if>
+
+    <f:if condition="{footerContainerPid}">
+        <div class="container">
+            <f:render partial="Navigation/NavbarFooter" arguments="{_all}"/>
+        </div>
+    </f:if>
+
+	<f:if condition="{slideOutPid}">
+    <!-- Slide out -->
+    <div class="slide-out slided-in">
+        <div class="form-shape yellow-gradient">
+            <div class="slide-out-content">
+                <f:cObject typoscriptObjectPath="lib.dynamicContent"
+                   data="{pageUid: '{slideoutPid}', colPos: '0'}" />
+            </div>
+            <p class="vertical-text">
+                Kontaktieren Sie uns!
+            </p>
+        </div>
+    </div>
+	</f:if>
+
+    <f:if condition="{settings.socialmedias.show}">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-auto">
+                    <f:render partial="SocialMediaIcons" arguments="{socialmedias: '{settings.socialmedias}'}"/>
+                </div>
+            </div>
+        </div>
+    </f:if>
+
+
+    <div class="copyright">
+        <div class="container">
+
+            <f:cObject typoscriptObjectPath="lib.content.footer.copyright"/>
+            |
+            <f:cObject typoscriptObjectPath="lib.content.footer.customer"/>
+            | All rights reserved. |
+            <a target="_blank"
+               href="https://www.creationell.de/digitale-medien/typo3-augsburg/"
+               title="creationell - Die Werbeagentur">
+                Design/TYPO3: www.creationell.de
+            </a>
+        </div>
+    </div>
+</footer>
+</html>

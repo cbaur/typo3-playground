@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<!-- crea_theme: Layouts/DefaultSite.html [begin] -->
+<div class="outerWrapper layout-{templateName}">
+    <!-- Header -->
+    <f:render partial="Header" arguments="{_all}"/>
+
+    <main>
+        <!--TYPO3SEARCH_begin-->
+        <f:render section="Default"/>
+        <!--TYPO3SEARCH_end-->
+    </main>
+
+    <!-- Footer -->
+    <f:render partial="Footer" arguments="{_all}"/>
+</div>
+<!-- crea_theme: Layouts/DefaultSite.html [end] -->
+</html>

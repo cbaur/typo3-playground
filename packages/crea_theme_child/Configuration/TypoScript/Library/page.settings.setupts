@@ -1,0 +1,3 @@
+page.10.settings {
+    searchPagePid = {$crea_theme.configuration.searchPagePid}
+}
