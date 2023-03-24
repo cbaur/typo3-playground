@@ -1,0 +1,22 @@
+rootPageId: 1
+base: /
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    hreflang: de-de
+    direction: ltr
+    flag: de
+    languageId: 0
+websiteTitle: ''
+baseVariants:
+  -
+    base: 'https://45506.chb.docker.creationell.com'
+    condition: 'applicationContext == "Development"'
+txCsseoXdefault: 0

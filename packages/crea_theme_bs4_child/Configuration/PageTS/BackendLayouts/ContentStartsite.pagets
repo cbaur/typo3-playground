@@ -1,0 +1,60 @@
+mod.web_layout.BackendLayouts {
+    ContentStartsite {
+        icon = EXT:crea_theme_bs4/Resources/Public/Icons/BackendLayouts/startseite.svg
+        name = Startseite
+        title = Startseite
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 7
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Header
+                                rowspan = 1
+                                colPos = 3
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Content 1
+                                rowspan = 1
+                                colPos = 0
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Full width
+                                rowspan = 1
+                                colPos = 2
+                            }
+                        }
+                    }
+                    4 {
+                        columns {
+                            1 {
+                                name = Content 2
+                                rowspan = 1
+                                colPos = 4
+                            }
+                        }
+                    }
+                    5 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:crea_theme_bs4_child/Resources/Private/Language/backendLayouts.xlf:area_unused
+                                rowspan = 1
+                                colPos = -2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

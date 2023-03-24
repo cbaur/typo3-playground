@@ -1,0 +1,14 @@
+.idea/
+*.zip
+*.log
+
+**/compiled.css
+/Resources/Private/Templates/ContentImageTest.html
+/Configuration/PageTS/BackendLayouts/ContentImageTest.pagets
+/Resources/Private/Partials/fluid_styled_content/
+/Resources/Private/Templates/fluid_styled_content/
+*Immolight/
+
+Configuration/TypoScript/Extensions/setup/immolight.setupts
+composer.lock
+!*.gitkeep

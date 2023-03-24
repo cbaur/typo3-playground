@@ -1,0 +1,10 @@
+# crea_theme_bs4 scripts
+@import 'EXT:crea_theme_bs4/Configuration/TypoScript/setup.txt'
+
+# Library
+@import 'EXT:crea_theme_bs4_child/Configuration/TypoScript/Library/*.setupts'
+
+# Extensions
+#@import 'EXT:crea_theme_bs4_child/Configuration/TypoScript/Extensions/news.setupts'
+@import 'EXT:crea_theme_bs4_child/Configuration/TypoScript/Extensions/dp_cookieconsent.setupts'
+@import 'EXT:crea_theme_bs4_child/Configuration/TypoScript/Extensions/media2click.setupts'

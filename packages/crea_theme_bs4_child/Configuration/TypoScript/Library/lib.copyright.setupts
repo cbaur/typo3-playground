@@ -1,0 +1,9 @@
+lib.content.footer.copyright = TEXT
+lib.content.footer.copyright {
+    data = page:SYS_LASTCHANGED
+    strftime = %Y
+    noTrimWrap = |&copy; Copyright ||
+}
+
+lib.content.footer.customer = TEXT
+lib.content.footer.customer.value = {$crea_theme_bs4.configuration.customer}
