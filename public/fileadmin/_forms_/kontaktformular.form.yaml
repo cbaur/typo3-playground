@@ -1,0 +1,144 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+identifier: kontaktformular
+label: Kontaktformular
+type: Form
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Nachricht von {name} über das Kontaktformular'
+      recipients:
+        your.company@example.com: 'Your Company name'
+      senderAddress: your.company@example.com
+      senderName: '{name}'
+      format: html
+      attachUploads: true
+      translation:
+        language: default
+      useFluidEmail: true
+      title: 'Nachricht von {name} über das Kontaktformular'
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '16'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    identifier: page-1
+    label: 'Ihre Nachricht an uns'
+    type: Page
+    renderables:
+      -
+        defaultValue: ''
+        identifier: name
+        label: Name
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Name
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Name ist ein Pflichtfeld.'
+            -
+              code: 1221560718
+              message: 'Name ist ein Pflichtfeld.'
+            -
+              code: 1347992400
+              message: 'Name ist ein Pflichtfeld.'
+            -
+              code: 1347992453
+              message: 'Name ist ein Pflichtfeld.'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: email
+        label: E-Mail
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'E-Mail Adresse'
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'E-Mail ist ein Pflichtfeld!'
+            -
+              code: 1221560718
+              message: 'E-Mail ist ein Pflichtfeld!'
+            -
+              code: 1347992400
+              message: 'E-Mail ist ein Pflichtfeld!'
+            -
+              code: 1347992453
+              message: 'E-Mail ist ein Pflichtfeld!'
+            -
+              code: 1221559976
+              message: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: EmailAddress
+      -
+        defaultValue: ''
+        identifier: message
+        label: 'Ihre Nachricht'
+        type: Textarea
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: ''
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Nachricht ist ein Pflichtfeld.'
+            -
+              code: 1221560718
+              message: 'Nachricht ist ein Pflichtfeld.'
+            -
+              code: 1347992400
+              message: 'Nachricht ist ein Pflichtfeld.'
+            -
+              code: 1347992453
+              message: 'Nachricht ist ein Pflichtfeld.'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: TextLinkCheckbox
+        identifier: textlinkcheckbox-1
+        label: 'Checkbox mit Link'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte akzeptieren Sie die Datenschutzerklärung.'
+            -
+              code: 1221560718
+              message: 'Bitte akzeptieren Sie die Datenschutzerklärung.'
+            -
+              code: 1347992400
+              message: 'Bitte akzeptieren Sie die Datenschutzerklärung.'
+            -
+              code: 1347992453
+              message: 'Bitte akzeptieren Sie die Datenschutzerklärung.'
+          linkTextBefore: 'Ich habe die '
+          linkText: Datenschutzerklärung
+          linkTextAfter: ' gelesen und akzeptiere diese.'
+          checkboxLink: '12'
+          checkboxDefaultStyling: false
+        validators:
+          -
+            identifier: NotEmpty

@@ -1,0 +1,7 @@
+@import 'EXT:media2click/Configuration/TypoScript/setup.typoscript'
+
+lib.contentElement {
+    partialRootPaths {
+        2 = EXT:crea_theme_child/Resources/Private/Extensions/FluidStyledContent/Partials/
+    }
+}

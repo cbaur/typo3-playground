@@ -1,0 +1,16 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+    <f:layout name="{f:if(condition: '{data.layout} == 3', then: 'FullPageLayout', else: 'DefaultSite')}"/>
+    <f:section name="Default">
+        <!-- crea_theme: Templates/Theme/Content.html [begin] -->
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', wrap: '<section class=\"main-content container\">|</section>'}" />
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1', wrap: '<section class=\"bg-primary\"><div class=\"container main-content\">|</div></section>'}" />
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2', wrap: '<section class=\"main-content container\">|</section>'}" />
+        <!-- crea_theme: Templates/Theme/Content.html [end] -->
+    </f:section>
+</div>
+
+
+
+
