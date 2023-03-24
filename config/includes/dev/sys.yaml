@@ -1,0 +1,4 @@
+SYS:
+  trustedHostsPattern: '.*'
+  features:
+    security.backend.enforceReferrer: false

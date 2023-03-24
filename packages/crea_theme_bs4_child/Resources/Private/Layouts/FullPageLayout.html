@@ -1,0 +1,84 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<!-- crea_theme_bs4: Layouts/DefaultSite.html [begin] -->
+<div class="outerWrapper layout-{templateName}">
+    <header>
+        <!-- Headbereich: Logo, Sprachauswahl, Suche -->
+        <div class="head">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-3">
+                        <f:cObject typoscriptObjectPath="lib.content.logo"/>
+                    </div>
+                    <div class="col-12 col-sm-9">
+                        <nav class="navbar navbar-expand">
+                            <div class="collapse navbar-collapse justify-content-end">
+                                <div class="row w-100 no-gutters">
+                                    <div class="col-9">
+                                        <f:cObject typoscriptObjectPath="lib.menu.meta"/>
+                                    </div>
+                                    <div class="col-3">
+                                        <f:cObject typoscriptObjectPath="lib.menu.language"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Headbereich Navigation Toggle -->
+        <div class="container-fluid">
+            <f:render partial="NavbarMain" arguments="{_all}" />
+        </div>
+    </header>
+
+    <main>
+        <!--TYPO3SEARCH_begin-->
+        <f:render section="Default"/>
+        <!--TYPO3SEARCH_end-->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <f:render partial="RenderContent"
+                  arguments="{libContent: 'lib.content.footer', fullWidth: 0}"/>
+
+        <f:render partial="RenderContent"
+                  arguments="{libContent: 'lib.content.footer2', class:'credits', fullWidth: 0}"/>
+
+        <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.content.slideOut')}">
+            <!-- Contact Form -->
+            <div class="slide-out slided-in">
+                <div class="form-shape yellow-gradient">
+                    <div class="slide-out-content">
+                        <f:cObject typoscriptObjectPath="lib.content.slideOut"/>
+                    </div>
+                    <p class="vertical-text">
+                        Kontaktieren Sie uns!
+                    </p>
+                </div>
+            </div>
+        </f:if>
+
+
+        <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.content.footer.customer')}">
+            <div class="copyright">
+                <div class="container-fluid">
+
+                    <f:cObject typoscriptObjectPath="lib.content.footer.copyright"/>
+                    |
+                    <f:cObject typoscriptObjectPath="lib.content.footer.customer"/>
+                    | All rights reserved. |
+                    <a target="_blank"
+                       href="https://www.creationell.de/digitale-medien/typo3-augsburg/"
+                       title="creationell - Die Werbeagentur">
+                        Design/TYPO3: www.creationell.de
+                    </a>
+                </div>
+            </div>
+        </f:if>
+    </footer>
+</div>
+<!-- crea_theme_bs4: Layouts/DefaultSite.html [end] -->
+</html>
