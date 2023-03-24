@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:c="http://typo3.org/ns/Crea/CreaThemeBs4/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<nav class="navbar navbar-main {navbarExpand} {navbarClass}">
+    <button data-target="#navbarMain" data-toggle="collapse" type="button" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse first-level{f:if(condition: '{navbarAlignment}', then: ' {navbarAlignment}')}"
+         id="navbarMain">
+        <f:render partial="Navigation/Main" arguments="{_all}"/>
+        <f:if condition="{settings.searchPagePid}">
+            <f:render partial="SearchMenu" arguments="{_all}"/>
+        </f:if>
+    </div>
+</nav>
+</html>

@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+			xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+			xmlns:c="Crea\CreaThemeBs4\ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+
+<f:if condition="{settings.languageMenu.renderMode}">
+	<f:then>
+		<f:render section="{settings.languageMenu.renderMode}" arguments="{_all}" />
+	</f:then>
+	<f:else>
+		<f:render section="inline" arguments="{_all}" />
+	</f:else>
+</f:if>
+
+<f:section name="inline">
+<ul class="nav language-navigation">
+	<f:for each="{languagenavigation}" as="item">
+		<li class="nav-item">
+			<f:if condition="{item.available}">
+				<f:then>
+					<a class="nav-link language-link{f:if(condition: item.active, then: ' active')}" href="{item.link}"
+						 hreflang="{item.hreflang}" title="{item.title}">
+						{item.navigationTitle}
+					</a>
+				</f:then>
+				<f:else>
+					<span class="nav-link language-link text-muted">{item.navigationTitle}</span>
+				</f:else>
+			</f:if>
+		</li>
+	</f:for>
+</ul>
+</f:section>
+
+<f:section name="dropdown">
+	<div class="navbar-nav">
+		<div class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="languageDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+				<c:icon icon="globe" />
+			</a>
+			<div class="dropdown-menu" aria-labelledby="languageDropdownMenuLink">
+				<f:for each="{languagenavigation}" as="item">
+					<f:if condition="{item.available}">
+						<f:then>
+							<a class="dropdown-item language-link{f:if(condition: item.active, then: ' active')}" href="{item.link}"
+								 hreflang="{item.hreflang}" title="{item.title}">
+								{item.navigationTitle}
+							</a>
+						</f:then>
+						<f:else>
+							<div class="dropdown-item language-link disabled">{item.navigationTitle}</div>
+						</f:else>
+					</f:if>
+				</f:for>
+			</div>
+		</div>
+	</div>
+</f:section>
+
+</html>

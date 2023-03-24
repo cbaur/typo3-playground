@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:c="http://typo3.org/ns/Crea/CreaThemeBs4/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<ul class="navbar-nav search-navigation">
+    <li class="nav-item dropdown position-static">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+            <c:icon icon="fas fa-search"/>
+        </a>
+
+        <div class="dropdown-menu w-100">
+            <form method="get" id="form_kesearch_searchfield" class="d-flex py-2 px-3 justify-content-between"
+                  name="form_kesearch_searchfield" action="{f:uri.page(pageUid: settings.searchPagePid)}">
+                <input type="text" id="ke_search_searchfield_sword" class="form-control form-control-sm mr-2 w-75"
+                       name="tx_kesearch_pi1[sword]" placeholder="Suche..."/>
+                <input type="submit" id="ke_search_searchfield_submit"
+                       class="btn btn-sm btn-outline-primary d-inline-block my-2 my-sm-0" alt="Suchen" value="Suchen"/>
+            </form>
+        </div>
+    </li>
+</ul>
+</html>

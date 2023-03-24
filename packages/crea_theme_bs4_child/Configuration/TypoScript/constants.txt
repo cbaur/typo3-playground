@@ -1,0 +1,82 @@
+@import 'EXT:crea_theme_bs4/Configuration/TypoScript/constants.txt'
+
+# Extensions
+@import 'EXT:crea_theme_bs4_child/Configuration/TypoScript/Extensions/news.constantsts'
+@import 'EXT:crea_theme_bs4_child/Configuration/TypoScript/Extensions/dp_cookieconsent.constantsts'
+
+crea_theme_bs4 {
+    configuration {
+
+        # The name of the customer rendered in the footer within the copyright section
+        customer =
+
+        menu {
+            meta {
+                containerPid = 3
+                alignment =
+                includeNotInMenu =
+                excludeUidList =
+            }
+
+            language {
+                dropdown = 0
+                alignment =
+            }
+
+            main {
+                class = navbar-light bg-light
+                expand = navbar-expand-lg
+                alignment = justify-content-between
+                excludeUidList =
+                prefixFirstLevel =
+            }
+
+            breadcrumb {
+                alignment =
+                includeNotInMenu =
+                excludeUidList =
+            }
+
+            footer {
+                alignment =
+                containerPid = 11
+                includeNotInMenu =
+                excludeUidList =
+            }
+        }
+
+        socialMedias {
+            show = 0
+        }
+
+        footerPagePid = 8
+        searchPagePid = 9
+    }
+
+    view {
+        templateRootPath = EXT:crea_theme_bs4_child/Resources/Private/Templates/
+        partialRootPath = EXT:crea_theme_bs4_child/Resources/Private/Partials/
+        layoutRootPath =  EXT:crea_theme_bs4_child/Resources/Private/Layouts/
+
+        logo_link_wrap {
+            on = 1
+            enabled = 1
+            pid = 3
+            class =
+        }
+
+        logo = EXT:crea_theme_bs4_child/Resources/Public/Images/creationell-logo.svg
+        logoWidth = 200
+        logoHeight =
+        logoAlt < crea_theme_bs4.configuration.customer
+
+        // get the family string from fonts.google.com. Fonts will be loaded from creationell font server
+        googleFonts =
+
+        fluidStyledContent {
+            templateRootPath =
+            partialRootPath =
+            layoutRootPath =
+        }
+    }
+}

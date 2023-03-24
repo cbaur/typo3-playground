@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:i="B13\Picture\ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<header>
+    <!-- Headbereich: Logo, Sprachauswahl -->
+    <div class="head">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-3">
+                    <f:cObject typoscriptObjectPath="lib.content.logo"/>
+                </div>
+                <f:if condition="{metanavigation -> f:count()} > 0 || {languagenavigation -> f:count()} > 1">
+                    <div class="col-12 col-sm-9">
+                        <nav class="navbar navbar-expand">
+                            <div class="collapse navbar-collapse justify-content-end">
+                                <div class="row w-100 no-gutters">
+                                    <f:if condition="{metanavigation}">
+                                        <div class="col-9">
+                                            <f:render partial="Navigation/Meta" arguments="{_all}"/>
+                                        </div>
+                                    </f:if>
+                                    <f:if condition="{languagenavigation -> f:count()} > 1">
+                                        <div class="col-3">
+                                            <f:render partial="Navigation/Language" arguments="{_all}"/>
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+    </div>
+
+    <!-- Headbereich Navigation Toggle -->
+    <div class="container">
+        <f:render partial="NavbarMain" arguments="{_all}"/>
+    </div>
+</header>
+
+</html>

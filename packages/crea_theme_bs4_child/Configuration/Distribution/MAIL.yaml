@@ -1,0 +1,7 @@
+MAIL:
+  layoutRootPaths:
+    20: 'EXT:crea_theme_bs4_child/Resources/Private/Email/Layouts/'
+  templateRootPaths:
+    20: 'EXT:crea_theme_bs4_child/Resources/Private/Email/Templates/'
+  partialRootPaths:
+    20: 'EXT:crea_theme_bs4_child/Resources/Private/Email/Partials/'

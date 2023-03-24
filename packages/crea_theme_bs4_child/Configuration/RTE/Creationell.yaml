@@ -1,0 +1,65 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+    config:
+        contentsCss:  "/assets/css/rte.css"
+
+        stylesSet:
+            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+            - { name: "Text Primary", element: "span", attributes: { 'class': 'text-primary' } }
+            - { name: "Text White", element: "span", attributes: { 'class': 'text-white' } }
+            - { name: "Table", element: "table", attributes: { 'class': 'table table-hover' } }
+            - { name: "Table Striped", element: "table", attributes: { 'class': 'table table-striped' } }
+            - { name: "Table Bordered", element: "table", attributes: { 'class': 'table table-bordered' } }
+            - { name: "Table Condensed", element: "table", attributes: { 'class': 'table table-condensed' } }
+            - { name: "Row Active", element: "tr", attributes: { 'class': 'table-active' } }
+            - { name: "Row Primary", element: "tr", attributes: { 'class': 'table-primary' } }
+            - { name: "Row Secondary", element: "tr", attributes: { 'class': 'table-secondary' } }
+            - { name: "Row Light", element: "tr", attributes: { 'class': 'table-light' } }
+            - { name: "Row Dark", element: "tr", attributes: { 'class': 'table-dark' } }
+            - { name: "Cell Primary", element: "td", attributes: { 'class': 'bg-primary' } }
+            - { name: "Cell Secondary", element: "td", attributes: { 'class': 'bg-secondary' } }
+            - { name: "Cell Light", element: "td", attributes: { 'class': 'bg-light' } }
+            - { name: "Cell Dark", element: "td", attributes: { 'class': 'bg-dark' } }
+            - { name: "Cell Primary light", element: "td", attributes: { 'class': 'table-primary' } }
+            - { name: "Cell Secondary light", element: "td", attributes: { 'class': 'table-secondary' } }
+            - { name: "Cell Dark light", element: "td", attributes: { 'class': 'table-dark' } }
+            - { name: "Button Primary", element: "a", attributes: { 'class': 'btn btn-primary' } }
+            - { name: "Button Secondary", element: "a", attributes: { 'class': 'btn btn-secondary' } }
+            - { name: "Button Light", element: "a", attributes: { 'class': 'btn btn-light' } }
+            - { name: "Button Dark", element: "a", attributes: { 'class': 'btn btn-dark' } }
+            - { name: "Button Link", element: "a", attributes: { 'class': 'btn btn-link' } }
+
+        toolbarGroups:
+            - { name: styles, groups: [ format, styles ] }
+            - { name: basicstyles, groups: [ basicstyles ] }
+            - { name: paragraph, groups: [ list, indent, blocks, align ] }
+            - "/"
+            - { name: links, groups: [ links ] }
+            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+            - { name: editing, groups: [ spellchecker ] }
+            - { name: insert, groups: [ insert ] }
+            - { name: tools, groups: [ table, specialchar ] }
+            - { name: document, groups: [ mode ] }
+
+        format_tags: "p;h1;h2;h3;h4;h5;h6;pre"
+
+        justifyClasses:
+            - text-left
+            - text-center
+            - text-right
+            - text-justify
+
+        extraPlugins:
+            - justify
+
+        removePlugins:
+            - image
+
+        removeButtons:
+            - Anchor
+            - Underline
+            - Strike

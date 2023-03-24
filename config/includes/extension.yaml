@@ -1,0 +1,34 @@
+EXTENSIONS:
+  backend:
+    backendFavicon: ''
+    backendLogo: ''
+    loginBackgroundImage: ''
+    loginFootnote: ''
+    loginHighlightColor: ''
+    loginLogo: 'EXT:crea_theme_bs4_child/Resources/Public/Images/creationell-logo.svg'
+  extensionmanager:
+    automaticInstallation: '1'
+    offlineMode: '0'
+  scheduler:
+    maxLifetime: '1440'
+    showSampleTasks: '1'
+  mask:
+    json: 'typo3conf/ext/crea_theme_bs4_child/Resources/Private/Mask/mask.json'
+    content: 'typo3conf/ext/crea_theme_bs4_child/Resources/Private/Mask/Frontend/Templates/'
+    layouts: 'typo3conf/ext/crea_theme_bs4_child/Resources/Private/Mask/Frontend/Layouts/'
+    partials: 'typo3conf/ext/crea_theme_bs4_child/Resources/Private/Mask/Frontend/Partials/'
+    backend: 'typo3conf/ext/crea_theme_bs4_child/Resources/Private/Mask/Backend/Templates/'
+    layouts_backend: 'typo3conf/ext/crea_theme_bs4_child/Resources/Private/Mask/Backend/Layouts/'
+    partials_backend: 'typo3conf/ext/crea_theme_bs4_child/Resources/Private/Mask/Backend/Partials/'
+    preview: 'typo3conf/ext/crea_theme_bs4_child/Resources/Public/Mask/'
+  translate_locallang:
+    clearCache: '1'
+    useL10n: '1'
+  schema:
+    automaticBreadcrumbSchemaGeneration: '1'
+    automaticWebPageSchemaGeneration: '1'
+  crea_theme_bs4:
+    icons:
+      path: 'public/assets/icons/'
+  imageoptimizer:
+    webpOnProcessing: false

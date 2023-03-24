@@ -1,0 +1,18 @@
+{
+	"name": "creationell/crea_distribution",
+	"type": "typo3-cms-extension",
+	"description": "creationell Distribution Package",
+	"minimum-stability": "stable",
+	"license": "proprietary",
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "crea_distribution"
+		}
+	},
+	"authors": [
+		{
+			"name": "Christian Baur",
+			"email": "c.baur@creationell.de"
+		}
+	]
+}

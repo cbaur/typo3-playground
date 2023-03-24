@@ -1,0 +1,3 @@
+RTE:
+  Presets:
+    - creationell: 'EXT:crea_theme_bs4_child/Configuration/RTE/Creationell.yaml'
