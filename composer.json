@@ -1,0 +1,65 @@
+{
+  "name": "creationell/typo3-installer",
+  "description": "This package installs the latest TYPO3 v8.7 and also includes all the extensions creationell uses in any project.",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Christian Baur",
+      "email": "c.baur@creationell.de"
+    },
+    {
+      "name": "Michael Jünger",
+      "email": "m.juenger@creationell.de"
+    },
+    {
+      "name": "Jean Pierre Kolb",
+      "email": "jp.kolb@creationell.de"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    { "type": "composer", "url": "https://composer.typo3.org/" },
+    {
+      "type": "vcs",
+      "url":  "git@gitlab.com:creationell_t3extensions/crea_theme_bs4.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@gitlab.com:creationell_t3extensions/formdata.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/agence-gaya/static_404.git"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "require": {
+    "typo3/cms": "^8.7",
+    "gaya/static-404": "^1.4",
+    "georgringer/news": "^6.0",
+    "clickstorm/cs_seo": "^2.1.0",
+    "dmitryd/typo3-realurl": "^2.2.0",
+    "creationell/crea_theme_bs4": "dev-master",
+    "t3/min": "^1.5"
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "web"
+    }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "cp ./vendor/components/jquery/jquery.js ./web/typo3conf/ext/crea_theme_bs4/Resources/Public/assets/javascripts/",
+      "cp ./vendor/twbs/bootstrap/dist/js/bootstrap.bundle.js ./web/typo3conf/ext/crea_theme_bs4/Resources/Public/assets/javascripts/",
+      "cp ./vendor/npm-asset/js-cookie/src/js.cookie.js ./web/typo3conf/ext/crea_theme_bs4/Resources/Public/assets/javascripts/",
+      "cp -R ./vendor/twbs/bootstrap/scss/. ./web/typo3conf/ext/crea_theme_bs4/Resources/Public/assets/stylesheets/bootstrap",
+      "cp -R ./vendor/components/font-awesome/scss/. ./web/typo3conf/ext/crea_theme_bs4/Resources/Public/assets/stylesheets/font-awesome/",
+      "cp -R ./vendor/components/font-awesome/webfonts/. ./web/typo3conf/ext/crea_theme_bs4/Resources/Public/assets/fonts/font-awesome/"
+    ]
+  }
+}
