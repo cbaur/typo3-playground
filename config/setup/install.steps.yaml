@@ -1,0 +1,29 @@
+imports:
+  - { resource: 'InstallSteps.yaml', type: console }
+
+databaseData:
+  arguments:
+    adminUserName:
+      value: 'creationell'
+    adminPassword:
+      value: 'password'
+    siteName:
+      default: 'A new creationell site'
+
+defaultConfiguration:
+  arguments:
+    siteSetupType:
+      value: site
+    siteUrl:
+      description: 'Specify the site base url (including scheme, host, port)'
+      default: 'http://127.0.0.1:10180/'
+
+setupProject:
+  type: Helhum\TYPO3\ConfigHandling\Install\Action\SetupConfigurationAction
+  description: 'Set up project settings'
+  customOverrideSettings: '%env(TYPO3_INSTALL_OVERRIDE_SETTINGS_FILE)%'
+  customSettings: []
+  removeSettings:
+    - LOG
+    - SYS.caching
+    - SYS.features

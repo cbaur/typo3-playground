@@ -1,0 +1,14 @@
+rootPageId: 1
+base: /
+languages:
+  -
+    title: English
+    hreflang: en-us
+    direction: ltr
+    flag: us
+websiteTitle: ''
+baseVariants:
+  -
+    base: 'https://45506.chb.docker.creationell.com'
+    condition: 'applicationContext == "Development"'
+txCsseoXdefault: 0

@@ -1,0 +1,22 @@
+@import 'EXT:news/Configuration/TypoScript/constants.txt'
+
+plugin.tx_news {
+    rss.channel {
+        title =
+        description =
+        link =
+        language =
+        copyright =
+        category =
+        generator =
+    }
+
+    view {
+        # cat=plugin.tx_news/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:crea_theme_bs4_child/Resources/Private/News/Templates/
+        # cat=plugin.tx_news/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:crea_theme_bs4_child/Resources/Private/News/Partials/
+        # cat=plugin.tx_news/file; type=string; label=Path to template layouts (FE)
+        #layoutRootPath = EXT:crea_theme_bs4_child/Resources/Private/News/Layouts/
+    }
+}

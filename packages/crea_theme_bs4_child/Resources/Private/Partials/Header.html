@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<header>
+	<f:if condition="{contactLinePid}">
+		<!-- Kontaktzeile -->
+    <div class="contact-line">
+        <div class="container">
+            <f:alias map="{alignment: 'justify-content-end'}">
+                <f:render partial="ContactLine" arguments="{_all}"/>
+            </f:alias>
+        </div>
+    </div>
+	</f:if>
+
+
+    <!-- Headbereich: Logo, Sprachauswahl -->
+    <div class="head">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-3">
+                    <f:cObject typoscriptObjectPath="lib.content.logo"/>
+                </div>
+                <div class="col-12 col-sm-9">
+                    <nav class="navbar navbar-expand">
+                        <div class="collapse navbar-collapse justify-content-end">
+                            <div class="row w-100 no-gutters">
+                                <div class="col-9">
+                                    <f:cObject typoscriptObjectPath="lib.menu.meta"/>
+                                </div>
+                                <div class="col-3">
+                                    <f:cObject typoscriptObjectPath="lib.menu.language"/>
+
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Headbereich Navigation Toggle -->
+    <div class="container">
+        <f:render partial="NavbarMain" arguments="{_all}"/>
+    </div>
+</header>
+</html>

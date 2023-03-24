@@ -1,0 +1,10 @@
+imports:
+  - { resource: settings.yaml, exclude: [LOG] }
+  - { resource: 'includes/dev/*.yaml', type: glob }
+  # uncomment if you use the proxy
+  # - { resource: includes/dev/additional/proxy.yaml }
+BE:
+  sessionTimeout: 31536000
+MAIL:
+  transport: 'smtp'
+  transport_smtp_server: 'mail:1025'
