@@ -1,0 +1,11 @@
+/vendor
+/var/*
+/.env
+!/.env.dist
+/.php_cs.cache
+
+/config/override.settings.yaml
+
+/node_modules
+/.npmrc
+.idea
