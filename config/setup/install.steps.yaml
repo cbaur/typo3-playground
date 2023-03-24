@@ -1,0 +1,43 @@
+imports:
+  - { resource: 'InstallSteps.yaml', type: console }
+
+databaseData:
+  arguments:
+    adminUserName:
+      value: 'creationell'
+    adminPassword:
+      value: 'password'
+    siteName:
+      default: 'A new creationell site'
+
+defaultConfiguration:
+  arguments:
+    siteSetupType:
+      value: site
+    siteUrl:
+      description: 'Specify the site base url (including scheme, host, port)'
+      default: '/'
+
+setupProject:
+  type: Helhum\TYPO3\ConfigHandling\Install\Action\SetupConfigurationAction
+  description: 'Set up project settings'
+  customOverrideSettings: '%env(TYPO3_INSTALL_OVERRIDE_SETTINGS_FILE)%'
+  customSettings: []
+  removeSettings:
+    - LOG
+    - SYS.caching
+    - SYS.features
+
+setupNews:
+  type: Creationell\Typo3Setup\Action\DefaultNewsConfigurationAction
+  description: 'Set up the news extension'
+
+setupWebpack:
+  type: Creationell\Typo3Setup\Action\SetupWebpackAction
+  description: 'Set up webpack'
+  arguments:
+    fontawesomeToken:
+      description: 'Enter your FontAwesome Pro NPM auth token'
+      default: ''
+      type: string
+      value: '%env(FONTAWESOME_PRO_NPM_TOKEN)%'

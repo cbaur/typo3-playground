@@ -1,0 +1,27 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+    <f:layout name="{f:if(condition: '{data.layout} == 3', then: 'FullPageLayout', else: 'DefaultSite')}"/>
+    <f:section name="Default">
+        <!-- crea_theme_bs4: Templates/Theme/Content.html [begin] -->
+
+        <f:render partial="RenderContent"
+                  arguments="{libContent: 'lib.content.header', class: 'header', fullWidth: 0}"/>
+
+        <f:render partial="RenderContent"
+                  arguments="{libContent: 'lib.content.main', class: 'teaser page-content', fullWidth: 0}"/>
+
+        <f:render partial="RenderContent"
+                  arguments="{libContent: 'lib.content.fullwidth', class: 'page-content content-extended', fullWidth: 0}"/>
+
+        <f:render partial="RenderContent"
+                  arguments="{libContent: 'lib.content.main2', class: 'page-content page-content-2', fullWidth: 0}"/>
+
+
+        <!-- crea_theme_bs4: Templates/Theme/Content.html [end] -->
+    </f:section>
+</div>
+
+
+
+

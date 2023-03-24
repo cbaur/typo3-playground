@@ -1,0 +1,32 @@
+rootPageId: 1
+base: /
+languages:
+  - title: Deutsch
+      enabled: true
+      languageId: 0
+      base: /
+      typo3Language: default
+      locale: de_DE.UTF-8
+      iso-639-1: de
+      navigationTitle: Deutsch
+      hreflang: de-de
+      direction: ltr
+      flag: de
+websiteTitle: 'New website'
+baseVariants:
+  -
+    base: 'https://45506.chb.docker.creationell.com'
+    condition: 'applicationContext == "Development"'
+txCsseoXdefault: 0
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: '/'
+    index: ''
+    map:
+      '/': 0
+      sitemap.xml: 1533906435
+      sitemap_news.xml: 1426844832
+
+imports:
+  - { resource: 'routes/*.yaml', type: glob }
