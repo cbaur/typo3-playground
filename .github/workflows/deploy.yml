@@ -1,0 +1,44 @@
+name: deploy
+
+on:
+  workflow_dispatch
+  # in production use the following trigger to dispatch the deploy on every push to main
+  #push:
+  #  branches:
+  #    - main
+
+# It is important to specify "concurrency" for the workflow,
+# to prevent concurrency between different deploys.
+concurrency: production_environment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTH_TOKEN }}
+
+      - name: Install Dependencies
+        run: composer install --no-dev --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm config set '@fortawesome:registry' 'https://npm.fontawesome.com/'
+      - run: npm config set '//npm.fontawesome.com/:_authToken' "${{ secrets.FONTAWESOME_TOKEN }}"
+      - run: npm install
+      - run: mv .env.dist .env && npm run production
+
+      - name: Deploy
+        uses: deployphp/action@v1.0.17
+        with:
+          dep: deploy live -vv --file=_deployer/deploy.php
+          known-hosts: ${{ secrets.KNOWN_HOSTS }}
+          private-key: ${{ secrets.PRIVATE_KEY }}

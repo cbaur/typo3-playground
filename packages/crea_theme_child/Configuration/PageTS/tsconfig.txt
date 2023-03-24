@@ -1,0 +1,8 @@
+# Include parent theme
+@import 'EXT:crea_theme/Configuration/PageTS/tsconfig.txt'
+
+# Include Library Folder
+@import 'EXT:crea_theme_child/Configuration/PageTS/Library/*.pagets'
+
+# Include News Setup
+# @import 'EXT:crea_theme_child/Resources/Private/News/PageTS/news.pagets'

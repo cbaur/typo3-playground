@@ -1,0 +1,10 @@
+//textpic, image and textmedia elements
+.figure {
+    position:relative;
+
+    .image-copyright {
+        position: absolute;
+        top:0;
+        right:0;
+    }
+}

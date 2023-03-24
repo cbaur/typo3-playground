@@ -1,0 +1,18 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+    <f:layout name="{f:if(condition: '{data.layout} == 3', then: 'FullPageLayout', else: 'DefaultSite')}"/>
+    <f:section name="Default">
+        <!-- crea_theme: Templates/Theme/ContentStartsite.html [begin] -->
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '3', wrap: '<div class=\"header-content\">|</div>'}" />
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', wrap: '<section id=\"section-1\" class=\"main-content container\">|</section>'}" />
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2', wrap: '<section id=\"section-2\" class=\"main-content\"><div class=\"container\">|</div></section>'}" />
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '4', wrap: '<section id=\"section-3\" class=\"bg-primary\"><div class=\"main-content container\">|</div></section>'}" />
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '6', wrap: '<section id=\"section-4\" class=\"main-content\"><div class=\"container\">|</div></section>'}" />
+        <!-- crea_theme: Templates/Theme/ContentStartsite.html [end] -->
+    </f:section>
+</div>
+
+
+
+

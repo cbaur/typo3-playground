@@ -1,0 +1,89 @@
+@import 'EXT:crea_theme/Configuration/TypoScript/constants.txt'
+
+# Extensions
+#@import 'EXT:crea_theme_child/Configuration/TypoScript/Extensions/news.constantsts'
+@import 'EXT:crea_theme_child/Configuration/TypoScript/Extensions/dp_cookieconsent.constantsts'
+@import 'EXT:crea_theme_child/Configuration/TypoScript/Extensions/media2click.constantsts'
+
+crea_theme {
+    configuration {
+
+        # adds line numbers as comments in compiled css, turn this off in production
+        scssDebug = 1
+
+        favicon = EXT:crea_theme/Resources/Public/Images/favicon.ico
+
+        # The name of the customer rendered in the footer within the copyright section
+        customer =
+
+        # Location of the content for the contact line section
+        contactLinePid =
+        slideoutPid =
+
+        menu {
+            meta {
+                containerPid =
+                alignment =
+                includeNotInMenu =
+                excludeUidList =
+            }
+
+            language {
+                dropdown = 0
+                alignment =
+            }
+
+            main {
+                class = navbar-light bg-light
+                expand = navbar-expand-lg
+                alignment = justify-content-between
+                excludeUidList =
+                prefixFirstLevel =
+            }
+
+            breadcrumb {
+                alignment =
+                includeNotInMenu =
+                excludeUidList =
+            }
+
+            footer {
+                alignment =
+                containerPid =
+                includeNotInMenu =
+                excludeUidList =
+            }
+        }
+
+        socialMedias {
+            show = 0
+        }
+
+        footerPagePid =
+        searchPagePid =
+    }
+
+    view {
+        templateRootPath = EXT:crea_theme_child/Resources/Private/Templates/
+        partialRootPath = EXT:crea_theme_child/Resources/Private/Partials/
+        layoutRootPath =  EXT:crea_theme_child/Resources/Private/Layouts/
+
+        logo_link_wrap {
+            on = 1
+            enabled = 1
+            pid = 1
+            class =
+        }
+
+        logo =
+        logoWidth = 200
+        logoHeight =
+        logoAlt < crea_theme.configuration.customer
+
+        fluidStyledContent {
+            templateRootPath =
+            partialRootPath =
+            layoutRootPath =
+        }
+    }
+}

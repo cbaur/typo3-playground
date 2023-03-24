@@ -1,0 +1,12 @@
+MAIL:
+  transport: '%env(EMAIL_TRANSPORT)%'
+  transport_smtp_server: '%env(EMAIL_SMTP_HOST)%'
+  transport_smtp_username: '%env(EMAIL_SMTP_USER)%'
+  transport_smtp_password: '%env(EMAIL_SMTP_PW)%'
+  transport_smtp_domain: '%env(EMAIL_SMTP_DOMAIN)%'
+  transport_smtp_encrypt: '%env(EMAIL_SMTP_ENCRYPT)%'
+  dsn: '%env(EMAIL_DSN)%'
+  defaultMailFromAddress: '%env(EMAIL_MAILFROM)%'
+  defaultMailFromName: '%env(EMAIL_MAILFROM_NAME)%'
+  defaultMailReplyToAddress: '%env(EMAIL_REPLYTO)%'
+  defaultMailReplyToName: '%env(EMAIL_REPLYTO_NAME)%'

@@ -1,0 +1,9 @@
+### Add custom section frames
+### See Configuration/PageTS/Library/sectionframes.pagets
+
+tt_content.stdWrap.innerWrap.cObject {
+
+    100 < tt_content.stdWrap.innerWrap.cObject.default
+    100.20.10.value = customFrame additionalClasses
+
+}
