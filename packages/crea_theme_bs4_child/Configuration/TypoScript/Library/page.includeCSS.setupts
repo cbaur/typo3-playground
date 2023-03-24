@@ -1,0 +1,3 @@
+page.includeCSS {
+  10 = /assets/css/index.css
+}

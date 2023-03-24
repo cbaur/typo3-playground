@@ -1,0 +1,5 @@
+tx_news.templateLayouts {
+    # Add your own template layouts here like so:
+    # 1 = News
+    # 2 = Mandanteninfo
+}
