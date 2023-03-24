@@ -1,0 +1,95 @@
+@import 'EXT:news/Configuration/TypoScript/setup.txt'
+
+
+# ==============================================
+# FE-Plugin configuration for EXT:news
+# ==============================================
+plugin.tx_news {
+    mvc.callDefaultActionIfActionCantBeResolved = 1
+    my = test
+    view {
+        templateRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            1 = EXT:news/Resources/Private/Templates/Styles/Twb/Templates/
+            2 = {$plugin.tx_news.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = EXT:news/Resources/Private/Partials/
+            1 = EXT:news/Resources/Private/Templates/Styles/Twb/Partials/
+            2 = {$plugin.tx_news.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:news/Resources/Private/Layouts/
+            1 = EXT:news/Resources/Private/Templates/Styles/Twb/Layouts/
+            2 = {$plugin.tx_news.view.layoutRootPath}
+        }
+
+        widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            1 = EXT:news/Resources/Private/Templates/Styles/Twb/Templates/
+            2 = {$plugin.tx_news.view.templateRootPath}
+        }
+    }
+
+    # Modify the translation
+    _LOCAL_LANG {
+        default {
+            #read_more = mehr >>
+            more-link = mehr >>
+            back-link = zur&uuml;ck >>
+        }
+    }
+
+    # ====================================
+    # Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
+    # ====================================
+    settings {
+        cssFile >
+
+        #Displays a dummy image if the news have no media items
+        displayDummyIfNoMedia = 1
+
+        # general settings
+        overrideFlexformSettingsIfEmpty = cropMaxCharacters,dateField,timeRestriction,orderBy,orderDirection,backPid,listPid,startingpoint,recursive,list.paginate.itemsPerPage,list.paginate.templatePath
+
+        includeSubCategories = 0
+
+        analytics {
+            social {
+                facebookLike = 1
+                facebookShare = 1
+                twitter = 1
+            }
+        }
+
+        cropMaxCharacters = 150
+        orderBy = datetime
+        orderDirection = desc
+        topNewsFirst = 0
+        orderByAllowed = sorting,author,uid,title,teaser,author,tstamp,crdate,datetime,categories.title
+
+        facebookLocale = de_DE
+        googlePlusLocale = de
+        disqusLocale = de
+
+        # --------------
+        #  List
+        # --------------
+        list {
+            # media configuration
+            media {
+                image {
+                    maxWidth = 512
+                    maxHeight = 512
+
+                    maxHeightThumb = 78
+                    maxWidthThumb = 78
+                }
+
+                #dummyImage = fileadmin/redaktion/bilder/news/dummy-preview-image.png
+            }
+        }
+    }
+}

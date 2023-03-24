@@ -1,0 +1,16 @@
+### Add custom section frames
+### See Configuration/TypoScript/Library/sectionframes.setupts
+
+TCEFORM.tt_content {
+    layout {
+
+    }
+    
+    # Add frames for FluidStyledContent
+    frame_class {
+        addItems {
+            # The class name in html will be frame-your-class-name
+            # your-class-name = The frame name visible in backend
+        }
+    }
+}

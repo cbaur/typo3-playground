@@ -1,0 +1,39 @@
+{
+  "name": "creationell-webpack-starter",
+  "version": "1.1.0",
+  "description": "Utilize Laravel Mix (with Webpack under the hood) to compile static frontend assets (js, css and more).",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "npx mix",
+    "watch": "npx mix watch",
+    "hot": "npx mix watch --hot",
+    "build": "npm run production",
+    "prod": "npm run production",
+    "production": "npx mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/creationell_intern/creationell-webpack-starter.git"
+  },
+  "author": "Christian Baur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/creationell_intern/creationell-webpack-starter/issues"
+  },
+  "homepage": "https://gitlab.com/creationell_intern/creationell-webpack-starter#readme",
+  "devDependencies": {
+    "expose-loader": "^3.0.0",
+    "laravel-mix": "^6.0.29",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.39.0",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "^5.15.4",
+    "bootstrap": "^5.2.2",
+    "glightbox": "^3.1.0",
+    "js-cookie": "^2.2.1",
+    "popper.js": "^1.16.1"
+  }
+}

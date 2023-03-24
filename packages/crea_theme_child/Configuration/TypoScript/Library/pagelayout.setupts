@@ -1,0 +1,7 @@
+page.10.templateName.stdWrap.cObject {
+    pagets__ContentStartsite = TEXT
+    pagets__ContentStartsite.value = ContentStartsite
+
+    pagets__Content = TEXT
+    pagets__Content.value = Content
+}

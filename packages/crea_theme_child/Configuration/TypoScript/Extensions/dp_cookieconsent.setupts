@@ -1,0 +1,15 @@
+@import 'EXT:dp_cookieconsent/Configuration/TypoScript/setup.txt'
+plugin.tx_dp_cookieconsent._LOCAL_LANG {
+    de {
+        message = Unsere Webanwendungen verwenden Cookies, um unseren Lesern das beste Benutzererlebnis zu ermöglichen. Außerdem werden teilweise auch Cookies von Diensten Dritter gesetzt. Mit dem Klick auf "Akzeptieren" erklären Sie sich mit der Verwendung ALLER Cookies einverstanden.
+        allow = Speichern
+        link = Datenschutzerklärung
+        deny = Ablehnen
+        allowall = Alle akzeptieren
+
+        # Checkbox labels
+        dpRequire = Notwendig
+        dpStatistik = Statistiken
+        dpMarketing = Marketing
+    }
+}

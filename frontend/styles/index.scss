@@ -1,0 +1,32 @@
+// Main scss file, based on the 7-1 pattern: https://sass-guidelin.es/#the-7-1-pattern
+
+// Abstracts: Variables, Functions, Mixins, Placeholders
+@import "abstracts/variables";
+
+// Vendor Scss from node_modules or vendors/ dir
+@import "~bootstrap/scss/bootstrap";
+@import '~glightbox/dist/css/glightbox.css';
+
+// Base SCSS (Typography etc.)
+//@import "base/backgrounds";
+//@import "base/fonts";
+
+// Layouts: Header, Footer, Nav
+//@import "layout/main-nav";
+//@import "layout/header";
+//@import "layout/footer";
+//@import "layout/content";
+
+// Components: Buttons, Sliders, ...
+@import "components/icons";
+//@import "components/search";
+//@import "components/forms";
+
+// Pages: Specific stylings for single pages or a category of pages (Homepage, Product Page...)
+//@import "pages/home"
+//@import "pages/contact"
+
+// "Shame" file for hacks etc.
+//@import "custom";
+
+

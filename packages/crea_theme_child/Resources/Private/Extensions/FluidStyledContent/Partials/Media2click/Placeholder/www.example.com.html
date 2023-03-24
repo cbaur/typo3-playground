@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="media2click-placeholder-inner media2click-host-example">
+    <div class="media2click-content">
+        Individual placeholder template for www.example.com...
+        <f:if condition="{settings.m2cPrivacyPid}">
+            <br><f:link.page pageUid="{settings.m2cPrivacyPid}">{f:translate(extensionName: 'Media2click', key: 'moreInfo', default: 'More Info')}</f:link.page>
+        </f:if>
+    </div>
+</div>
+</html>
