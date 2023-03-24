@@ -1,0 +1,73 @@
+{
+  "name": "creationell/typo3-installer",
+  "description": "This package installs the latest TYPO3 v9.5 and also includes all the extensions creationell uses in any project.",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Christian Baur",
+      "email": "c.baur@creationell.de"
+    },
+    {
+      "name": "Jean Pierre Kolb",
+      "email": "jp.kolb@creationell.de"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    { "type": "composer", "url": "https://composer.typo3.org/" },
+    {
+      "type": "vcs",
+      "url":  "git@gitlab.com:creationell_t3extensions/crea_theme_bs4.git"
+    }
+  ],
+  "require": {
+    "georgringer/news": "^8.5",
+    "creationell/crea_theme_bs4": "dev-10lts",
+    "christophlehmann/imageoptimizer": "^3.0",
+    "sitegeist/sms-responsive-images": "^2.0",
+    "helhum/typo3-console": "^6.4",
+    "mask/mask": "^6.6",
+    "teaminmedias-pluswerk/ke_search": "^3.6",
+    "typo3/cms-about": "^10.4",
+    "typo3/cms-adminpanel": "^10.4",
+    "typo3/cms-backend": "^10.4",
+    "typo3/cms-belog": "^10.4",
+    "typo3/cms-beuser": "^10.4",
+    "typo3/cms-core": "^10.4",
+    "typo3/cms-dashboard": "^10.4",
+    "typo3/cms-extbase": "^10.4",
+    "typo3/cms-extensionmanager": "^10.4",
+    "typo3/cms-filelist": "^10.4",
+    "typo3/cms-felogin": "^10.4",
+    "typo3/cms-filemetadata": "^10.4",
+    "typo3/cms-fluid": "^10.4",
+    "typo3/cms-fluid-styled-content": "^10.4",
+    "typo3/cms-form": "^10.4",
+    "typo3/cms-frontend": "^10.4",
+    "typo3/cms-impexp": "^10.4",
+    "typo3/cms-info": "^10.4",
+    "typo3/cms-install": "^10.4",
+    "typo3/cms-linkvalidator": "^10.4",
+    "typo3/cms-lowlevel": "^10.4",
+    "typo3/cms-opendocs": "^10.4",
+    "typo3/cms-recordlist": "^10.4",
+    "typo3/cms-recycler": "^10.4",
+    "typo3/cms-redirects": "^10.4",
+    "typo3/cms-reports": "^10.4",
+    "typo3/cms-rte-ckeditor": "^10.4",
+    "typo3/cms-scheduler": "^10.4",
+    "typo3/cms-seo": "^10.4",
+    "typo3/cms-setup": "^10.4",
+    "typo3/cms-sys-note": "^10.4",
+    "typo3/cms-t3editor": "^10.4",
+    "typo3/cms-tstemplate": "^10.4",
+    "typo3/cms-viewpage": "^10.4"
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "../../web"
+    }
+  }
+}
