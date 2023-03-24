@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:if condition="{f:cObject(typoscriptObjectPath: '{libContent}')}">
+    <!-- {libContent} -->
+    <div class="{f:if(condition: '{class}', then: '{class}', else: 'content')}">
+        <div class="{f:if(condition: '{fullWidth}', then: 'container-fluid', else: 'container')}{f:if(condition: '{containerClass}', then: ' {containerClass}')}">
+            <f:cObject typoscriptObjectPath="{libContent}"/>
+        </div>
+    </div>
+    <!-- /{libContent} -->
+</f:if>
+</html>

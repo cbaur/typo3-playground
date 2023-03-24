@@ -1,0 +1,16 @@
+lib.menu.language {
+    20 {
+        special.value = 0,1
+        1 {
+            NO {
+                stdWrap.override = DE || EN
+                doNotLinkIt = 1
+                stdWrap {
+                    typolink {
+                        additionalParams = &L=0 || &L=1
+                    }
+                }
+            }
+        }
+    }
+}

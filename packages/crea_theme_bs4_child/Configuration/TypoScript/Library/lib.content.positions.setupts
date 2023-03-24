@@ -1,0 +1,43 @@
+##### Header #####
+
+lib.content.contactline < styles.content.get
+lib.content.contactline.select.pidInList = {$crea_theme_bs4.configuration.contactLinePid}
+
+lib.content.header < styles.content.get
+lib.content.header {
+  select.where = colPos = 3
+}
+
+##### Content #####
+
+lib.content.teaser < styles.content.get
+lib.content.teaser {
+  select.where = colPos = 1
+}
+
+lib.content.main < styles.content.get
+lib.content.main {
+  select.where = colPos = 0
+}
+
+lib.content.fullwidth < styles.content.get
+lib.content.fullwidth {
+  select.where = colPos = 2
+}
+
+lib.content.main2 < styles.content.get
+lib.content.main2 {
+  select.where = colPos = 4
+}
+
+lib.content.lastarea < styles.content.get
+lib.content.lastarea {
+  select.where = colPos = 5
+}
+
+##### Footer #####
+lib.content.footer < styles.content.get
+lib.content.footer.select.pidInList = {$crea_theme_bs4.configuration.footerPagePid}
+
+lib.content.slideOut < styles.content.get
+lib.content.slideOut.select.pidInList = {$crea_theme_bs4.configuration.slideoutPid}

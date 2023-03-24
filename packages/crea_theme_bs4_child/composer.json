@@ -1,0 +1,22 @@
+{
+	"name": "creationell/crea_theme_bs4_child",
+	"type": "typo3-cms-extension",
+	"description": "Child Theme for TYPO3 crea_theme_bs4",
+	"minimum-stability": "stable",
+	"license": "proprietary",
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "crea_theme_bs4_child"
+		}
+	},
+	"authors": [
+		{
+			"name": "Christian Baur",
+			"email": "c.baur@creationell.de"
+		},
+		{
+			"name": "Tatjana Esin",
+			"email": "t.esin@creationell.de"
+		}
+	]
+}
